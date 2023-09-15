@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: algamoneyApi
+  datasource:
+    url: jdbc:mysql://localhost:3306/algamoneyApi
+    username: algamoney
+    password: algamoney
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    flyway:
+      locations:
+        classpath: db.migration
+
+  jpa:
+    show-sql: true
+
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+    date-format: yyyy-MM-dd
